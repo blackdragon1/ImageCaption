@@ -20,7 +20,7 @@ and open the template in the editor.
                         return false;" />Add Line</button>
             </div>
             <div id="list">
-                <div id="elemento">
+                <div id="elemento" >
                     <label> 1</label>
                     <input type="text" name="email1" />
                 </div>
@@ -31,12 +31,18 @@ and open the template in the editor.
         <script type="text/javascript" language="JavaScript">
                     function set_body_height() { // set body height = window height
                         var wh = $(window).height();
-                        $('body').height(wh);
+                        $('img').height(wh);
+                    }
+                    function set_body_Width() { // set body height = window height
+                        var ww = $(window).width();
+                        $('input').width(ww);
                     }
                     $(document).ready(function() {
                         set_body_height();
+                        set_body_Width();
                         $(window).bind('resize', function() {
                             set_body_height();
+                            set_body_Width();
                         });
                     });
         </script>
